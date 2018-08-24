@@ -5037,7 +5037,8 @@ instancja → MojaKlasa → klasa X → ... → klasa Y → ... → object
             <header><h1>Podmiana <code>__builtins__</code> w celu<br>ograniczenia dozwolonych operacji?</h1></header>
             
             
-            <section><div class="zu-section-wrapper"><h1>Nie polecam, wielu już próbowało...</h1></div></section>
+            <section><div class="zu-section-wrapper"><h1>Nie polecam, wielu już próbowało...</h1>
+<h2>Takie i podobne rozwiązania okazują się być dziurawe jak sito.</h2></div></section>
             
           </div>
           <div class="presenter_notes">
@@ -6146,7 +6147,7 @@ instancja → MojaKlasa → klasa X → ... → klasa Y → ... → object
             
             
             <section><div class="zu-section-wrapper"><h2><br></h2>
-<h2 style="width: 750px;">&bull; Podczas gdy kod ciała klasy wykonywany jest w&nbsp;ramach ewaluowania jej definicji (a więc <strong>jednokrotnie</strong>) &mdash; kod ciała funkcji <strong>nie jest wykonywany</strong> w&nbsp;ramach ewaluowania jej&nbsp;definicji (wykonywany jest jedynie kod z jej <strong>sygnatury</strong>, w tym kod&nbsp;reprezentujący argumenty&nbsp;domyślne)</h2></div></section>
+<h2 style="width: 750px;">&bull; Podczas gdy kod ciała klasy wykonywany jest w&nbsp;ramach ewaluowania jej definicji (a więc <strong>jednokrotnie</strong>) &mdash; kod ciała funkcji <strong>nie jest wykonywany</strong> w&nbsp;ramach ewaluowania jej&nbsp;definicji (wykonywany jest jedynie kod z jej <strong>nagłówka</strong>, w tym kod&nbsp;reprezentujący argumenty&nbsp;domyślne)</h2></div></section>
             
           </div>
           <div class="presenter_notes">
@@ -6178,7 +6179,7 @@ instancja → MojaKlasa → klasa X → ... → klasa Y → ... → object
             
             <section><div class="zu-section-wrapper"><h2><br></h2>
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">0</span><span class="p">):</span>
-<span class="o">...</span>     <span class="s2">&quot;Błąd już w sygnaturze!&quot;</span>
+<span class="o">...</span>     <span class="s2">&quot;Błąd już w nagłówku!&quot;</span>
 <span class="o">...</span> 
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
   <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
@@ -6651,7 +6652,7 @@ instancja → MojaKlasa → klasa X → ... → klasa Y → ... → object
 <h3>(W szczególności <code>locals()</code> zwraca to samo, co <code>globals()</code>)</h3>
 <h3>&nbsp;</h3>
 <h2>Jeśli podano <em>globals</em> i <em>locals</em>:<br>jest podobnie, jak dla lokalnej przestrzeni nazw klasy.</h2>
-<h3>(W szczególności lokalna przestrzeń nazw nie musi być reprezentowana przez <code>__dict__</code> &mdash; może to być inny słownikopodobny obiekt...)</h3></div></section>
+<h3>(W szczególności lokalna przestrzeń nazw nie musi być reprezentowana przez obiekt typu <code>dict</code> &mdash; może to być dowolny słownikopodobny obiekt...)</h3></div></section>
             
           </div>
           <div class="presenter_notes">
